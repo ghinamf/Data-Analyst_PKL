@@ -1,19 +1,20 @@
-# Python
+#Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Virtual environment
+#Virtual environment
 venv/
 .env
 
-# Jupyter Notebook checkpoints
+#Jupyter Notebook checkpoints
 .ipynb_checkpoints
 
-# Streamlit
+#Streamlit
 .streamlit/
 
-# Data and Source Code Folders
+#Data and Source Code Folders
 data/
 src/
+
