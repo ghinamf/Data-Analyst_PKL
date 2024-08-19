@@ -14,9 +14,9 @@ import openpyxl
 import os
 
 #Directory file for saving th excel
-working_directory = r'C:\Users\Lenovo\analyst_pkl\code'
-os.makedirs(working_directory, exist_ok=True)
-os.chdir(working_directory)
+# working_directory = r'C:\Users\Lenovo\analyst_pkl\code'
+# os.makedirs(working_directory, exist_ok=True)
+# os.chdir(working_directory)
 
 
 #Load the pkl
@@ -125,7 +125,7 @@ if st.button('Prediksi'):
     
     # try:
     #     # Load existing history file
-    #     history_df = pd.read_excel(history_file)
+    #     history_df = pd.read_excel(history_file)git
     #     hist= [history_df, data_simpan]
     #     history_df = pd.concat(hist, ignore_index=True)
     # except FileNotFoundError:
