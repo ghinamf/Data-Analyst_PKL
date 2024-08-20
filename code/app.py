@@ -19,13 +19,31 @@ import os
 # os.chdir(working_directory)
 
 
-#Load the pkl
-scaler = joblib.load('scaler.pkl')
-le_status = joblib.load('le_status.pkl')
-#le_lokasi = joblib.load('le_lokasi.pkl')
-ohe = joblib.load('ohe.pkl')
-modela = joblib.load('final_model.pkl')
-feature_order = joblib.load('feature_order.pkl')
+# #Load the pkl
+# scaler = joblib.load('scaler.pkl')
+# le_status = joblib.load('le_status.pkl')
+# #le_lokasi = joblib.load('le_lokasi.pkl')
+# ohe = joblib.load('ohe.pkl')
+# modela = joblib.load('final_model.pkl')
+# feature_order = joblib.load('feature_order.pkl')
+
+# Get the absolute path of the current directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Load the pkl files using absolute paths
+scaler_path = os.path.join(current_dir, 'scaler.pkl')
+le_status_path = os.path.join(current_dir, 'le_status.pkl')
+# le_lokasi_path = os.path.join(current_dir, 'le_lokasi.pkl')  # Assuming not used
+ohe_path = os.path.join(current_dir, 'ohe.pkl')
+model_path = os.path.join(current_dir, 'final_model.pkl')
+feature_order_path = os.path.join(current_dir, 'feature_order.pkl')
+
+scaler = joblib.load(scaler_path)
+le_status = joblib.load(le_status_path)
+# le_lokasi = joblib.load(le_lokasi_path)  # Assuming not used
+ohe = joblib.load(ohe_path)
+modela = joblib.load(model_path)
+feature_order = joblib.load(feature_order_path)
 
 
 # MySQL connection
