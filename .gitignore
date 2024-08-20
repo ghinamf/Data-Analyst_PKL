@@ -16,7 +16,7 @@ data/
 src/
 
 #MySQL privacy
-# config.py
+config.py
 
 #toml
 secrets.toml
