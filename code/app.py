@@ -7,7 +7,7 @@ import joblib
 
 import mysql.connector
 from mysql.connector import Error
-from config import MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE
+import config
 
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 from sklearn.ensemble import RandomForestClassifier
