@@ -7,6 +7,7 @@ import joblib
 
 import mysql.connector
 from mysql.connector import Error
+import config
 
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 from sklearn.ensemble import RandomForestClassifier
@@ -47,21 +48,37 @@ feature_order = joblib.load(feature_order_path)
 
 
 # MySQL connection
+# def create_connection():
+#     connection = None
+#     try:
+#         connection = mysql.connector.connect(
+#             host="localhost",
+#             user="root",
+#             password="@Fng031216--",  # Ganti dengan password MySQL Anda
+#             database="prediksi_keahlian"
+#         )
+#         if connection.is_connected():
+#             st.write("Koneksi Berhasil")
+#     except Error as e:
+#         st.write(f"Error: '{e}'")
+    
+#     return connection
 def create_connection():
     connection = None
     try:
         connection = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="@Fng031216--",  # Ganti dengan password MySQL Anda
-            database="prediksi_keahlian"
+            host=config.MYSQL_HOST,
+            user=config.MYSQL_USER,
+            password=config.MYSQL_PASSWORD,
+            database=config.MYSQL_DATABASE
         )
         if connection.is_connected():
             st.write("Koneksi Berhasil")
     except Error as e:
         st.write(f"Error: '{e}'")
-    
+
     return connection
+
 
 def insert_prediction(connection, data):
     cursor = connection.cursor()
