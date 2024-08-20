@@ -11,9 +11,6 @@ venv/
 #Jupyter Notebook checkpoints
 .ipynb_checkpoints
 
-#Streamlit
-.streamlit/
-
 #Data and Source Code Folders
 data/
 src/
